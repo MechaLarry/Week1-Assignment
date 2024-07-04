@@ -53,19 +53,19 @@
         }
     
         function calculateNetSalary() {
-            var basicSalary = prompt("Enter your basic salary:");
-            var benefits = prompt("Enter your benefits:");
+            var grossSalary = prompt("Enter your Gross salary:");
+            var benefits = prompt("Enter your contributor benefits:");
 
             // Validate input
-            if (basicSalary === null || basicSalary === "" || isNaN(basicSalary) || basicSalary < 0 ||
+            if (grossSalary  === null || grossSalary  === "" || isNaN(grossSalary ) || grossSalary  < 0 ||
                 benefits === null || benefits === "" || isNaN(benefits) || benefits < 0) {
                 alert("Please enter valid numbers for salary and benefits.");
                 return;
             }
 
-            basicSalary = Number(basicSalary);
+            grossSalary  = Number(grossSalary);
             benefits = Number(benefits);
-            var grossSalary = basicSalary + benefits;
+            var grossSalary = grossSalary + benefits;
 
             // PAYE (Tax) calculation
             var payee;
