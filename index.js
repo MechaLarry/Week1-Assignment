@@ -77,7 +77,7 @@
                 payee = 2400 + (32333 - 24000) * 0.25 + (grossSalary - 32333) * 0.3;
             }
 
-            // NHIF deduction (simplified example, real rates vary)
+            // NHIF deduction
             var nhif;
             if (grossSalary <= 5999) nhif = 150;
             else if (grossSalary <= 7999) nhif = 300;
@@ -98,7 +98,7 @@
             else nhif = 1700;
 
             // NSSF deduction
-            var nssf = Math.min(grossSalary * 0.06, 1080); // Assuming 1080 KSh is the maximum NSSF deduction
+            var nssf = Math.min(grossSalary * 0.06, 1080); 
 
             // Net Salary calculation
             var netSalary = grossSalary - payee - nhif - nssf;
